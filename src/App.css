@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Estilos adicionales para el tema oscuro */ 
+:root { 
+  --background-color: #121212; 
+  --text-color: #ffffff; 
+  --link-color: #ffa726; 
+} 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*body { 
+  background-color: var(--background-color); 
+  color: var(--text-color); 
+}*/ 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.navbar, 
+.card, 
+.button { 
+  background-color: #333333; 
+} 
 
-.App-link {
-  color: #61dafb;
-}
+a {
+  color: var(--link-color); 
+} 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover { 
+  color: #ff9800; 
 }
