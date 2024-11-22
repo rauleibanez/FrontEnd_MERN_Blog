@@ -1,10 +1,19 @@
 import axios from 'axios';
 
 export const login = async (username, password) => {
-  const response = await axios.post('/api/login', { username, password });
-  return response.data.token;
+  try {
+    const response = await axios.post('http://localhost:4000/api/login', { username, password });
+    return response.data.token;
+  } catch (error) {
+    throw new Error('Error de autenticación');
+  }
 };
 
 export const register = async (username, password) => {
-  await axios.post('/api/register', { username, password });
+  try {
+    await axios.post('/api/register', { username, password });
+  } catch (error) {
+    throw new Error('Error al registrar');
+  }
 };
+

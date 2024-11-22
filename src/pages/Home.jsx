@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section className="section">
       <h1 className="title has-text-white has-text-centered">Home</h1> 
-      <div className="container is-widescreen content box block has-background-dark"> 
+      <div className="container"> 
         <PostList /> 
       </div> 
     </section>
