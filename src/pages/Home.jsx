@@ -4,7 +4,7 @@ import PostList from '../components/PostList';
 const Home = ({ token }) => {
   return (
     <section className="section">      
-      <h1 className="title has-text-white has-text-centered">Home</h1> 
+      <h1 className="title has-text-white has-text-centered">Blog App</h1> 
       <div className="container"> 
         <PostList token={token} /> 
       </div> 

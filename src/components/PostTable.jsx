@@ -1,6 +1,27 @@
 import React from 'react';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const PostTable = ({ posts, onEdit, onDelete }) => {
+  const handleDelete = (id) => {
+    confirmAlert({
+      title: 'Confirmar Eliminación', 
+      message: '¿Estás seguro de que deseas eliminar esta publicación?', 
+      buttons: [
+        {
+          label: 'Sí', 
+          onClick: () => onDelete(id)
+        },
+        {
+          label: 'No',
+          onClick: () => {}
+        }
+      ]
+    }); 
+};
+
+
+
   return (
     <table className="table is-striped is-hoverable is-fullwidth">
       <thead>
@@ -21,7 +42,7 @@ const PostTable = ({ posts, onEdit, onDelete }) => {
               <button className="button is-small is-info mr-2" onClick={() => onEdit(post)}>Editar</button>
             </td>
             <td>  
-              <button className="button is-small is-danger" onClick={() => onDelete(post._id)}>Eliminar</button>
+              <button className="button is-small is-danger" onClick={() => handleDelete(post._id)}>Eliminar</button>
             </td>
           </tr>
         ))}

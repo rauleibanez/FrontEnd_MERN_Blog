@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import { createPost, updatePost } from '../services/postService';
 
 const PostForm = ({ post, onSuccess }) => {
@@ -9,12 +10,15 @@ const PostForm = ({ post, onSuccess }) => {
     e.preventDefault();
     try { 
       if (post) { 
-        await updatePost(post._id, { title, body }); 
+        await updatePost(post._id, { title, body });
+        toast.success('Publicación actualizada con éxito'); 
       } else { 
-        await createPost({ title, body }); 
+        await createPost({ title, body });
+        toast.success('Publicación creada con éxito'); 
       } 
       onSuccess(); 
-    } catch (error) { 
+    } catch (error) {
+      toast.error('Error al guardar la publicación'); 
       console.error('Error al guardar la publicación', error);
     }
   };

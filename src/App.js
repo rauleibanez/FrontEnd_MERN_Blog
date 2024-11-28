@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import { ToastContainer } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/Home';
 import About from './pages/About';
 import Admin from './pages/Admin';
@@ -8,7 +10,6 @@ import EditPost from './pages/EditPost';
 import CreatePost from './pages/CreatePost';
 import Login from './components/Login';
 import Register from './components/Register';
-// import Layout from './components/Layout';
 import Header from './components/Header';
 
 
@@ -51,7 +52,8 @@ const App = () => {
           <Route path="/register"  element={<Register/>} />
           <Route path="/edit-post/:id" element={<EditPost />} />
           <Route path="/create-post" element={<CreatePost />} />
-        </Routes>      
+        </Routes>
+        <ToastContainer />      
       </BrowserRouter>
     </div>  
   );

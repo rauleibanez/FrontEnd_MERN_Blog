@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { login } from '../services/authService';
 
 
@@ -15,8 +16,10 @@ const Login = ({ onLogin }) => {
       const token = await login(username, password);
       onLogin(token, username);
       navigate('/admin');
+      toast.success('Inicio de sesión exitoso');
     } catch (error) {
-      setError('Credenciales incorrectas. Por favor, inténtalo de nuevo.'); // Mensaje de error
+      toast.error('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+      console.error('Error al iniciar sesión', error); // Mensaje de error
     }
   };
 
