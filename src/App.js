@@ -8,6 +8,7 @@ import About from './pages/About';
 import Admin from './pages/Admin';
 import EditPost from './pages/EditPost';
 import CreatePost from './pages/CreatePost';
+import PostDetail from './pages/PostDetails';
 import Login from './components/Login';
 import Register from './components/Register';
 import Header from './components/Header';
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/register"  element={<Register/>} />
           <Route path="/edit-post/:id" element={<EditPost />} />
           <Route path="/create-post" element={<CreatePost />} />
+          <Route path="/post/:id" element={<PostDetail />} />
         </Routes>
         <ToastContainer />      
       </BrowserRouter>
