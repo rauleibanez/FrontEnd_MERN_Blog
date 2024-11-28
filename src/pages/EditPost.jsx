@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import PostForm from '../components/PostForm';
-import { getPost, updatePost } from '../services/postService';
+import { getPost } from '../services/postService';
 
 const EditPost = () => {
   const { id } = useParams();
@@ -21,10 +21,10 @@ const EditPost = () => {
   };
 
   return (
-    <div className="container">
+    <section className="section">
       <h1 className="title has-text-white">Editar Publicación</h1>
       {post && <PostForm post={post} onSuccess={handleSuccess} />}
-    </div>
+    </section>
   );
 };
 

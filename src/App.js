@@ -5,9 +5,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Admin from './pages/Admin';
 import EditPost from './pages/EditPost';
+import CreatePost from './pages/CreatePost';
 import Login from './components/Login';
 import Register from './components/Register';
-import Layout from './components/Layout';
+// import Layout from './components/Layout';
 import Header from './components/Header';
 
 
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/register"  element={<Register/>} />
           <Route path="/edit-post/:id" element={<EditPost />} />
+          <Route path="/create-post" element={<CreatePost />} />
         </Routes>      
       </BrowserRouter>
     </div>  

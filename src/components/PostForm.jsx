@@ -7,12 +7,16 @@ const PostForm = ({ post, onSuccess }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (post) {
-      await updatePost(post._id, { title, body });
-    } else {
-      await createPost({ title, body });
+    try { 
+      if (post) { 
+        await updatePost(post._id, { title, body }); 
+      } else { 
+        await createPost({ title, body }); 
+      } 
+      onSuccess(); 
+    } catch (error) { 
+      console.error('Error al guardar la publicación', error);
     }
-    onSuccess();
   };
 
   return (

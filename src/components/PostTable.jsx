@@ -7,6 +7,7 @@ const PostTable = ({ posts, onEdit, onDelete }) => {
         <tr>
           <th>Título</th>          
           <th>Fecha de Creación</th>
+          <th>Fecha de Actualización</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -15,6 +16,7 @@ const PostTable = ({ posts, onEdit, onDelete }) => {
           <tr key={post._id}>
             <td>{post.title}</td>            
             <td>{new Date(post.createdAt).toLocaleDateString()}</td>
+            <td>{new Date(post.updatedAt).toLocaleDateString()}</td>
             <td>
               <button className="button is-small is-info mr-2" onClick={() => onEdit(post)}>Editar</button>
             </td>
