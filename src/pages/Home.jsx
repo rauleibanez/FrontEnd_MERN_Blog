@@ -1,12 +1,12 @@
 import React from 'react';
 import PostList from '../components/PostList';
 
-const Home = () => {
+const Home = ({ token }) => {
   return (
-    <section className="section">
+    <section className="section">      
       <h1 className="title has-text-white has-text-centered">Home</h1> 
       <div className="container"> 
-        <PostList /> 
+        <PostList token={token} /> 
       </div> 
     </section>
   );

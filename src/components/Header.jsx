@@ -20,7 +20,8 @@ const Header = ({ token, username, onLogout }) => {
         { token ? ( 
           <> 
             <span className="navbar-item">Hola, {username}</span>
-            <button className="button is-light" onClick={handleLogout}>Logout</button> 
+            <Link className="navbar-item" to="/admin">Panel</Link>
+            <button className="button is-danger" onClick={handleLogout}>Logout</button> 
           </> 
           ) : ( 
             <Link className="navbar-item" to="/login">Login</Link> 
