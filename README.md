@@ -54,10 +54,10 @@ The project follows **two learning objectives** :
 ![image4](2024-11-29_4.png)
 
 ### Create New post Screen
-![image5](2024-11-19_5.png)
+![image5](2024-11-29_5.png)
 
 ### Editin Post Screen
-![image6](2024-11-19_6.png)
+![image6](2024-11-29_6.png)
 
 ### Erase Corfirmn window
 ![image7](2024-11-29_7.png)
